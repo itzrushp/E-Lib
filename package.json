@@ -8,7 +8,9 @@
   "main": "server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.ts"
+    "dev": "nodemon --watch './' --ext ts --exec node --loader ts-node/esm server.ts",
+    "build": "tsc",
+    "start": "node --loader ts-node/esm server.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
